@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
+import APP1 from './component/app1'
 
 import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
@@ -24,6 +25,8 @@ import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+
+
 
 const key = 'home';
 
@@ -43,11 +46,15 @@ export function HomePage({
     if (username && username.trim().length > 0) onSubmitForm();
   }, []);
 
+
+  
+
   const reposListProps = {
     loading,
     error,
     repos,
   };
+
 
   return (
     <article>
@@ -56,13 +63,17 @@ export function HomePage({
         <meta
           name="description"
           content="application homepage"
+        
         />
+        <div>hii
+         <App1/>
+         </div>
+       
+    
       </Helmet>
-      <div>
-        If you are able to see this message, your setup is working, <br/>Please get yourself 
-        familiar with the code structure. The Problem will be given at the time of the test.
-      </div>
+      
     </article>
+   
   );
 }
 

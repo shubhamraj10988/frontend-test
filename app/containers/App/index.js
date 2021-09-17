@@ -17,17 +17,17 @@ import GlobalStyle from '../../global-styles';
 
 export default function App() {
   return (
-    <Fragment>
-      <Helmet
-        titleTemplate="%s - Calance"
-        defaultTitle="Calance"
-      >
-        <meta name="description" content="Calance" />
-      </Helmet>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-      </Switch>
-      <GlobalStyle />
-    </Fragment>
-  );
+      <Fragment>
+        <Helmet
+          titleTemplate="%s - Calance"
+          defaultTitle="Calance"
+        >
+          <meta name="description" content="Calance" />
+        </Helmet>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+        </Switch>
+        <GlobalStyle />
+      </Fragment>
+    );
 }

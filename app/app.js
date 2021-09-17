@@ -21,6 +21,7 @@ import 'sanitize.css/sanitize.css';
 import App from 'containers/App';
 import configureStore from './configureStore';
 
+import App1 from '../../frontend-test-master/app/containers/HomePage/component/app1'
 // Import i18n messages
 import { translationMessages } from './i18n';
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
@@ -40,7 +41,8 @@ const render = messages => {
   ReactDOM.render(
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <App />
+        <App1 />
+       
       </ConnectedRouter>
     </Provider>,
     MOUNT_NODE,
